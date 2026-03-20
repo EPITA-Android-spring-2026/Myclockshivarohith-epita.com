@@ -8,7 +8,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp   // ✅ FIXED
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 import java.text.SimpleDateFormat
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MainScreen()   // ✅ USED
+            MainScreen()
         }
     }
 }
@@ -113,9 +113,9 @@ fun StopwatchScreen() {
 
         Row {
             Button(onClick = { running = true }) { Text("Start") }
-            Spacer(modifier = Modifier.width(10.dp))   // ✅ FIXED
+            Spacer(modifier = Modifier.width(10.dp))
             Button(onClick = { running = false }) { Text("Stop") }
-            Spacer(modifier = Modifier.width(10.dp))   // ✅ FIXED
+            Spacer(modifier = Modifier.width(10.dp))
             Button(onClick = { time = 0 }) { Text("Reset") }
         }
     }
